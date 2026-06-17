@@ -1,0 +1,51 @@
+﻿[dotenv@17.3.1] injecting env (7) from .env -- tip: ≡ƒöÉ prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ≡ƒöÉ encrypt with Dotenvx: https://dotenvx.com
+node : [33mΓÜá∩╕Å  Supabase credentials 
+missing or invalid in .env. Image 
+uploads to Supabase Storage will 
+fail.[0m
+At line:1 char:1
++ node server.js 2>&1 | Out-File 
+-FilePath server_error.log -Encoding u 
+...
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifi 
+   ed: ([33mΓÜá∩╕Å  Su... will fail.[  
+  0m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComm 
+   andError
+ 
+D:\DevSpectra Client Projects\tncdc\tncdc
+\backend\node_modules\router\index.js:392
+      throw new TypeError('argument 
+handler must be a function')
+      ^
+
+TypeError: argument handler must be a 
+function
+    at Function.use (D:\DevSpectra 
+Client Projects\tncdc\tncdc\backend\node_
+modules\router\index.js:392:13)
+    at Function.<anonymous> 
+(D:\DevSpectra Client Projects\tncdc\tncd
+c\backend\node_modules\express\lib\applic
+ation.js:222:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (D:\DevSpectra 
+Client Projects\tncdc\tncdc\backend\node_
+modules\express\lib\application.js:219:7)
+    at Object.<anonymous> (D:\DevSpectra 
+Client Projects\tncdc\tncdc\backend\serve
+r.js:88:5)
+    at Module._compile (node:internal/mod
+ules/cjs/loader:1562:14)
+    at Object..js (node:internal/modules/
+cjs/loader:1699:10)
+    at Module.load (node:internal/modules
+/cjs/loader:1313:32)
+    at Function._load (node:internal/modu
+les/cjs/loader:1123:12)
+    at TracingChannel.traceSync 
+(node:diagnostics_channel:322:14)
+
+Node.js v22.13.0

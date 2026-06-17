@@ -1,0 +1,379 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+  output          = "./generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SiteSettings {
+  id             Int      @id @default(autoincrement())
+  headerType     String   @default("logo")
+  logo           String   @default("")
+  favicon        String   @default("")
+  playStoreLink  String   @default("")
+  appStoreLink   String   @default("")
+  primaryColor   String   @default("#10b981")
+  secondaryColor String   @default("#059669")
+  marqueeEntries String[] @default([])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model InstituteProfile {
+  id                     Int      @id @default(1)
+  instituteName          String   @default("")
+  ownerName              String   @default("")
+  designation            String   @default("DIRECTOR")
+  email                  String   @default("")
+  dob                    String   @default("")
+  mobile                 String   @default("")
+  alternateMobile        String   @default("")
+  address                String   @default("")
+  state                  String   @default("Tamil Nadu")
+  city                   String   @default("")
+  pincode                String   @default("")
+  controllerName         String   @default("")
+  showController         Boolean  @default(false)
+  showDirector           Boolean  @default(false)
+  logoUrl                String   @default("")
+  signatureUrl           String   @default("")
+  controllerSignatureUrl String   @default("")
+  updatedAt              DateTime @updatedAt
+
+  @@map("institute_profile")
+}
+
+model CourseCategory {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  iconUrl   String?
+  count     Int      @default(0)
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  courses   Course[]
+
+  @@map("course_categories")
+}
+
+model CourseAwardCategory {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  courses   Course[]
+
+  @@map("course_award_categories")
+}
+
+model Course {
+  id              Int                 @id @default(autoincrement())
+  title           String
+  courseCode      String              @unique
+  awardCategoryId Int
+  awardCategory   CourseAwardCategory @relation(fields: [awardCategoryId], references: [id])
+  certificateType String              @default("Certificate")
+  preposition     String              @default("In")
+  courseType      String
+  categoryId      Int
+  category        CourseCategory      @relation(fields: [categoryId], references: [id])
+  mrp             Float?
+  price           Float?
+  duration        String
+  durationUnit    String              @default("Months")
+  imageUrl        String?
+  previewVideoUrl String?
+  totalLectures   Int?
+  practicalExam   Boolean             @default(true)
+  objectiveExam   Boolean             @default(true)
+  description     String?
+  syllabus        String?
+  tags            String[]            @default([])
+  isPopular       Boolean             @default(true)
+  isRecommended   Boolean             @default(true)
+  isMRPVisible    Boolean             @default(true)
+  hideExamResult  Boolean             @default(true)
+  status          Boolean             @default(true)
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  @@map("courses")
+}
+
+model Batch {
+  id              Int      @id @default(autoincrement())
+  name            String
+  fromTime        String
+  toTime          String
+  timing          String
+  totalStudents   String
+  totalAmount     String   @default("18,000.00")
+  paidAmount      String   @default("0.00")
+  remainingAmount String   @default("18,000.00")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("batches")
+}
+
+model Designation {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("designations")
+}
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  permissions Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("roles")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  password      String
+  fullName      String   @default("")
+  mobile        String   @default("")
+  employeeId    String   @default("")
+  dateOfJoining String   @default("")
+  department    String   @default("")
+  designation   String   @default("")
+  qualification String   @default("")
+  dateOfBirth   String   @default("")
+  address       String   @default("")
+  profilePhoto  String   @default("")
+  roles         String[] @default([])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Enquiry {
+  id              Int               @id @default(autoincrement())
+  firstName       String
+  relationship    String
+  parentName      String?
+  surname         String?
+  dob             String
+  gender          String
+  pincode         String
+  mobile          String
+  alternateMobile String?
+  email           String?
+  address         String?
+  course          String
+  source          String            @default("Unknown")
+  assignedTo      String            @default("Unassigned")
+  profileImage    String?
+  signature       String?
+  status          String            @default("New")
+  followUps       EnquiryFollowUp[]
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  @@map("enquiries")
+}
+
+model EnquiryFollowUp {
+  id                  Int      @id @default(autoincrement())
+  enquiryId           Int
+  enquiry             Enquiry  @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
+  followUpDate        String
+  nextFollowUpDate    String?
+  studentResponse     String
+  conversationDetails String
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@map("enquiry_follow_ups")
+}
+
+model ExamGrade {
+  id          Int      @id @default(autoincrement())
+  performance String
+  grade       String
+  start       Int
+  end         Int
+  updatedAt   DateTime @updatedAt
+
+  @@map("exam_grades")
+}
+
+model WebsiteBanner {
+  id          Int      @id @default(autoincrement())
+  displayMode String   @default("banner")
+  badgeText   String   @default("")
+  badgeIcon   String   @default("")
+  title       String   @default("")
+  description String   @default("")
+  imageUrl    String   @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("website_banners")
+}
+
+model FAQ {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("faqs")
+}
+
+model FAQBanner {
+  id        Int      @id @default(1)
+  banner1   String   @default("")
+  banner2   String   @default("")
+  updatedAt DateTime @updatedAt
+
+  @@map("faq_banners")
+}
+
+model Teacher {
+  id           Int      @id @default(autoincrement())
+  name         String
+  image        String
+  designation  String?
+  description  String?
+  facebookUrl  String?
+  twitterUrl   String?
+  instagramUrl String?
+  phone        String?
+  email        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("teachers")
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  image     String?
+  role      String?
+  institute String?
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model TestimonialSettings {
+  id        Int      @id @default(1)
+  title     String   @default("")
+  subtitle  String   @default("")
+  updatedAt DateTime @updatedAt
+
+  @@map("testimonial_settings")
+}
+
+model MissionVision {
+  id                   Int      @id @default(1)
+  bannerBadgeText      String   @default("")
+  bannerBadgeIcon      String   @default("")
+  bannerDesc           String   @default("")
+  videoImage           String   @default("")
+  videoUrl             String   @default("")
+  visionTitle          String   @default("")
+  visionDesc           String   @default("")
+  visionImage1         String   @default("")
+  visionImage2         String   @default("")
+  visionImage3         String   @default("")
+  visionFeature1Icon   String   @default("")
+  visionFeature1Title  String   @default("")
+  visionFeature1Desc   String   @default("")
+  visionFeature2Icon   String   @default("")
+  visionFeature2Title  String   @default("")
+  visionFeature2Desc   String   @default("")
+  visionFeature3Icon   String   @default("")
+  visionFeature3Title  String   @default("")
+  visionFeature3Desc   String   @default("")
+  missionTitle         String   @default("")
+  missionDesc          String   @default("")
+  missionImage1        String   @default("")
+  missionImage2        String   @default("")
+  missionImage3        String   @default("")
+  missionFeature1Icon  String   @default("")
+  missionFeature1Title String   @default("")
+  missionFeature1Desc  String   @default("")
+  missionFeature2Icon  String   @default("")
+  missionFeature2Title String   @default("")
+  missionFeature2Desc  String   @default("")
+  missionFeature3Icon  String   @default("")
+  missionFeature3Title String   @default("")
+  missionFeature3Desc  String   @default("")
+  updatedAt            DateTime @updatedAt
+
+  @@map("mission_vision")
+}
+
+model Gallery {
+  id           Int      @id @default(autoincrement())
+  title        String
+  type         String
+  mediaUrl     String
+  thumbnailUrl String?
+  status       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("gallery")
+}
+
+model Admission {
+  id             Int      @id @default(autoincrement())
+  studentId      String   @unique
+  enquiryId      Int?
+  firstName      String
+  surname        String
+  email          String?
+  mobile         String
+  courseName     String
+  courseType     String
+  courseFee      Float?
+  discountType   String?
+  discountValue  Float?
+  isGstTaken     Boolean  @default(false)
+  gstAmount      Float?
+  finalAmount    Float?
+  admissionFee   Float?
+  admissionDate  String
+  showFatherName Boolean  @default(true)
+  showSurname    Boolean  @default(true)
+  batch          String?
+  referralBy     String?
+  status         String   @default("Active")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("admissions")
+}
+
+model Language {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  status    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("languages")
+}

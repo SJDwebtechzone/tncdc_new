@@ -1,0 +1,11 @@
+=== ALL Users ===
+ID:1 | Name:Mohana Priya S | E:priyajass33@gmail.com | M:9500396045 | R:["STAFF"]
+ID:2 | Name:Mohana | E:listentocoolbreeze@gmail.com | M:09500396045 | R:["STAFF"]
+ID:9 | Name:Sri  | E:smvilakku@gmail.com | M:8523697412 | R:["Student"]
+
+=== Admissions ===
+ID:1 | Name:Mohana SRINIVASAN | E:g@gmail.com | M:9500396045 | C:Python
+ID:2 | Name:Balaji Mani | E:listentocoolbreeze@gmail.com | M:9500396045 | C:Java Full Stack
+ID:3 | Name:Jhansi  | E:listentocoolbreeze@gmail.com | M:1234567890 | C:Mern Stack
+ID:4 | Name:Jhansi  | E:listentocoolbreeze@gmail.com | M:1234567890 | C:Mern Stack
+ID:5 | Name:Sri  | E:smvilakku@gmail.com | M:8523697412 | C:Java Full Stack

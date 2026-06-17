@@ -1,0 +1,210 @@
+[2026-04-24T09:47:46.471Z] Create Order Request Received: amount=38000, receipt=rcpt_1777024066332
+[2026-04-24T09:47:46.476Z] Fetching Razorpay settings...
+[2026-04-24T09:47:46.738Z] Settings found. Initializing Razorpay...
+[2026-04-24T09:47:46.800Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777024066332","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T09:47:47.135Z] Razorpay Create Order Error: undefined
+[2026-04-24T09:49:18.498Z] Create Order Request Received: amount=38000, receipt=rcpt_1777024158462
+[2026-04-24T09:49:18.498Z] Fetching Razorpay settings...
+[2026-04-24T09:49:18.569Z] Settings found. Initializing Razorpay...
+[2026-04-24T09:49:18.571Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777024158462","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T09:49:18.784Z] Razorpay Create Order Error: undefined
+[2026-04-24T09:50:39.520Z] Create Order Request Received: amount=38000, receipt=rcpt_1777024239408
+[2026-04-24T09:50:39.522Z] Fetching Razorpay settings...
+[2026-04-24T09:50:39.756Z] Settings found. Initializing Razorpay...
+[2026-04-24T09:50:39.803Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777024239408","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T09:50:40.122Z] Razorpay Create Order Error: {"code":"BAD_REQUEST_ERROR","description":"Authentication failed"}
+[2026-04-24T09:51:40.277Z] Create Order Request Received: amount=38000, receipt=rcpt_1777024300239
+[2026-04-24T09:51:40.278Z] Fetching Razorpay settings...
+[2026-04-24T09:51:40.376Z] Settings found. Initializing Razorpay...
+[2026-04-24T09:51:40.378Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777024300239","notes":{"courseId":6,"studentEmail":"john@gmail.com"}}
+[2026-04-24T09:51:40.611Z] Razorpay Create Order Error: {"description":"Authentication failed","code":"BAD_REQUEST_ERROR"}
+[2026-04-24T10:24:44.715Z] Create Order Request Received: amount=38000, receipt=test1234
+[2026-04-24T10:24:44.719Z] Fetching Razorpay settings...
+[2026-04-24T10:24:45.047Z] Settings found. Initializing Razorpay...
+[2026-04-24T10:24:45.091Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"test1234","notes":{}}
+[2026-04-24T10:24:45.505Z] Razorpay Create Order Error: {"code":"BAD_REQUEST_ERROR","description":"Authentication failed"}
+[2026-04-24T10:34:03.631Z] Create Order Request Received: amount=38000, receipt=rcpt_1777026843565
+[2026-04-24T10:34:03.633Z] Fetching Razorpay settings...
+[2026-04-24T10:34:03.646Z] Settings found. Initializing Razorpay...
+[2026-04-24T10:34:03.654Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777026843565","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T10:34:03.955Z] Razorpay Create Order Error: {"description":"Authentication failed","code":"BAD_REQUEST_ERROR"}
+[2026-04-24T10:34:16.156Z] Create Order Request Received: amount=38000, receipt=rcpt_1777026855960
+[2026-04-24T10:34:16.157Z] Fetching Razorpay settings...
+[2026-04-24T10:34:16.249Z] Settings found. Initializing Razorpay...
+[2026-04-24T10:34:16.253Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777026855960","notes":{"courseId":6,"studentEmail":"john@gmail.com"}}
+[2026-04-24T10:34:16.445Z] Razorpay Create Order Error: {"description":"Authentication failed","code":"BAD_REQUEST_ERROR"}
+[2026-04-24T10:52:30.000Z] Create Order Request Received: amount=38000, receipt=rcpt_1777027949804
+[2026-04-24T10:52:30.003Z] Fetching Razorpay settings...
+[2026-04-24T10:52:30.446Z] Settings found. Initializing Razorpay...
+[2026-04-24T10:52:30.477Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777027949804","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T10:52:30.842Z] Razorpay Create Order Error: {"description":"Authentication failed","code":"BAD_REQUEST_ERROR"}
+[2026-04-24T10:58:01.139Z] Create Order Request Received: amount=38000, receipt=rcpt_1777028281010
+[2026-04-24T10:58:01.144Z] Fetching Razorpay settings...
+[2026-04-24T10:58:01.349Z] Settings found. Initializing Razorpay...
+[2026-04-24T10:58:01.387Z] Triggering Razorpay API with options: {"amount":3800000,"currency":"INR","receipt":"rcpt_1777028281010","notes":{"courseId":6,"studentEmail":"admin@tncdc.in"}}
+[2026-04-24T10:58:01.869Z] Order Created Successfully: order_ShIyg3LaCEifXV
+[2026-04-24T13:37:54.193Z] Create Order Request Received: amount=23000, receipt=rcpt_1777037874081
+[2026-04-24T13:37:54.194Z] Fetching Razorpay settings...
+[2026-04-24T13:37:54.230Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:37:54.284Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777037874081","notes":{}}
+[2026-04-24T13:37:54.802Z] Order Created Successfully: order_ShLhZ3TNunTnib
+[2026-04-24T13:39:19.235Z] Fetching Razorpay settings...
+[2026-04-24T13:39:19.333Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:46:17.054Z] Fetching Razorpay settings...
+[2026-04-24T13:46:17.135Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:48:01.829Z] Create Order Request Received: amount=23000, receipt=rcpt_1777038481756
+[2026-04-24T13:48:01.831Z] Fetching Razorpay settings...
+[2026-04-24T13:48:01.940Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:48:01.941Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777038481756","notes":{}}
+[2026-04-24T13:48:02.398Z] Order Created Successfully: order_ShLsGHN4VRoZMC
+[2026-04-24T13:48:26.890Z] Fetching Razorpay settings...
+[2026-04-24T13:48:27.078Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:48:27.161Z] Verify Payment Error: 
+Invalid `prisma.admission.create()` invocation in
+D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:53
+
+  132 
+  133 // B. Create Admission
+  134 const studentId = `STU-${Date.now()}`;
+→ 135 const newAdmission = await prisma.admission.create({
+        data: {
+          studentId: "STU-1777038507122",
+          enquiryId: 13,
+          firstName: "Janani",
+          email: "janani@gmail.com",
+          mobile: "8122843071",
+          courseName: "Java Full Stack",
+          courseType: "Single",
+          courseFee: 23000,
+          finalAmount: 23000,
+          admissionFee: 23000,
+          admissionDate: "2026-04-24",
+          status: "Active",
+      +   surname: String
+        }
+      })
+
+Argument `surname` is missing. - Stack: PrismaClientValidationError: 
+Invalid `prisma.admission.create()` invocation in
+D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:53
+
+  132 
+  133 // B. Create Admission
+  134 const studentId = `STU-${Date.now()}`;
+→ 135 const newAdmission = await prisma.admission.create({
+        data: {
+          studentId: "STU-1777038507122",
+          enquiryId: 13,
+          firstName: "Janani",
+          email: "janani@gmail.com",
+          mobile: "8122843071",
+          courseName: "Java Full Stack",
+          courseType: "Single",
+          courseFee: 23000,
+          finalAmount: 23000,
+          admissionFee: 23000,
+          admissionDate: "2026-04-24",
+          status: "Active",
+      +   surname: String
+        }
+      })
+
+Argument `surname` is missing.
+    at Nn (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at ei.handleRequestError (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6911)
+    at ei.handleAndLogRequestError (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6593)
+    at ei.request (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6300)
+    at async a (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:130:9551)
+    at async D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:30
+[2026-04-24T13:49:51.649Z] Create Order Request Received: amount=23000, receipt=rcpt_1777038591625
+[2026-04-24T13:49:51.650Z] Fetching Razorpay settings...
+[2026-04-24T13:49:51.820Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:49:51.822Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777038591625","notes":{}}
+[2026-04-24T13:49:54.251Z] Order Created Successfully: order_ShLuENASgNGJoD
+[2026-04-24T13:50:26.187Z] Fetching Razorpay settings...
+[2026-04-24T13:50:26.370Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:50:26.387Z] Verify Payment Error: 
+Invalid `prisma.admission.create()` invocation in
+D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:53
+
+  132 
+  133 // B. Create Admission
+  134 const studentId = `STU-${Date.now()}`;
+→ 135 const newAdmission = await prisma.admission.create({
+        data: {
+          studentId: "STU-1777038626380",
+          enquiryId: 14,
+          firstName: "Roja",
+          email: "roja@gmail.com",
+          mobile: "8122843071",
+          courseName: "Java Full Stack",
+          courseType: "Single",
+          courseFee: 23000,
+          finalAmount: 23000,
+          admissionFee: 23000,
+          admissionDate: "2026-04-24",
+          status: "Active",
+      +   surname: String
+        }
+      })
+
+Argument `surname` is missing. - Stack: PrismaClientValidationError: 
+Invalid `prisma.admission.create()` invocation in
+D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:53
+
+  132 
+  133 // B. Create Admission
+  134 const studentId = `STU-${Date.now()}`;
+→ 135 const newAdmission = await prisma.admission.create({
+        data: {
+          studentId: "STU-1777038626380",
+          enquiryId: 14,
+          firstName: "Roja",
+          email: "roja@gmail.com",
+          mobile: "8122843071",
+          courseName: "Java Full Stack",
+          courseType: "Single",
+          courseFee: 23000,
+          finalAmount: 23000,
+          admissionFee: 23000,
+          admissionDate: "2026-04-24",
+          status: "Active",
+      +   surname: String
+        }
+      })
+
+Argument `surname` is missing.
+    at Nn (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:29:1363)
+    at ei.handleRequestError (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6911)
+    at ei.handleAndLogRequestError (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6593)
+    at ei.request (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:121:6300)
+    at async a (D:\DevSpectra Client Projects\tncdc\tncdc\backend\node_modules\@prisma\client\runtime\library.js:130:9551)
+    at async D:\DevSpectra Client Projects\tncdc\tncdc\backend\routes\razorpay.js:135:30
+[2026-04-24T13:52:41.964Z] Create Order Request Received: amount=23000, receipt=rcpt_1777038761904
+[2026-04-24T13:52:41.966Z] Fetching Razorpay settings...
+[2026-04-24T13:52:42.046Z] Settings found. Initializing Razorpay...
+[2026-04-24T13:52:42.083Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777038761904","notes":{}}
+[2026-04-24T13:52:43.420Z] Order Created Successfully: order_ShLxCz5UutcKBj
+[2026-04-24T13:53:13.706Z] Fetching Razorpay settings...
+[2026-04-24T13:53:13.823Z] Settings found. Initializing Razorpay...
+[2026-04-24T14:05:48.538Z] Create Order Request Received: amount=23000, receipt=rcpt_1777039548505
+[2026-04-24T14:05:48.540Z] Fetching Razorpay settings...
+[2026-04-24T14:05:48.601Z] Settings found. Initializing Razorpay...
+[2026-04-24T14:05:48.614Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777039548505","notes":{}}
+[2026-04-24T14:05:48.936Z] Order Created Successfully: order_ShMB2R3GNe8Xb1
+[2026-04-24T14:06:10.325Z] Fetching Razorpay settings...
+[2026-04-24T14:06:10.407Z] Settings found. Initializing Razorpay...
+[2026-04-24T15:28:44.665Z] Create Order Request Received: amount=23000, receipt=rcpt_1777044524434
+[2026-04-24T15:28:44.670Z] Fetching Razorpay settings...
+[2026-04-24T15:28:45.025Z] Settings found. Initializing Razorpay...
+[2026-04-24T15:28:45.054Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777044524434","notes":{}}
+[2026-04-24T15:28:45.495Z] Order Created Successfully: order_ShNaeV0DF1vNEy
+[2026-04-24T15:29:15.666Z] Fetching Razorpay settings...
+[2026-04-24T15:29:15.759Z] Settings found. Initializing Razorpay...
+[2026-04-24T15:33:59.248Z] Create Order Request Received: amount=23000, receipt=rcpt_1777044839216
+[2026-04-24T15:33:59.251Z] Fetching Razorpay settings...
+[2026-04-24T15:33:59.322Z] Settings found. Initializing Razorpay...
+[2026-04-24T15:33:59.348Z] Triggering Razorpay API with options: {"amount":2300000,"currency":"INR","receipt":"rcpt_1777044839216","notes":{}}
+[2026-04-24T15:34:00.875Z] Order Created Successfully: order_ShNgClVjPnidPV
+[2026-04-24T15:34:22.350Z] Fetching Razorpay settings...
+[2026-04-24T15:34:22.437Z] Settings found. Initializing Razorpay...

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "email": "priyajass33@gmail.com",
+    "password": "priya0102",
+    "fullName": "Mohana Priya S",
+    "mobile": "9500396045",
+    "employeeId": "EMP01",
+    "dateOfJoining": "2026-03-02",
+    "department": "ECE",
+    "designation": "Trainer",
+    "qualification": "M.Tech",
+    "dateOfBirth": "1987-06-05",
+    "address": "10/779 Dr.Radhakrishnan Salai\r\nPoonga Nagar",
+    "profilePhoto": "",
+    "roles": [
+      "STAFF"
+    ],
+    "createdAt": "2026-03-12T09:20:39.745Z",
+    "updatedAt": "2026-03-19T09:08:01.191Z",
+    "emergencyContact": "",
+    "paidLeaveAllocation": 12,
+    "salaryMode": "Monthly",
+    "status": true
+  },
+  {
+    "id": 9,
+    "email": "smvilakku@gmail.com",
+    "password": "Sri123",
+    "fullName": "Sri ",
+    "mobile": "8523697412",
+    "employeeId": "",
+    "dateOfJoining": "",
+    "department": "",
+    "designation": "",
+    "qualification": "",
+    "dateOfBirth": "",
+    "address": "",
+    "profilePhoto": "",
+    "roles": [
+      "Student"
+    ],
+    "createdAt": "2026-04-05T07:10:19.155Z",
+    "updatedAt": "2026-04-05T07:10:19.155Z",
+    "emergencyContact": "",
+    "paidLeaveAllocation": 12,
+    "salaryMode": "Monthly",
+    "status": true
+  },
+  {
+    "id": 2,
+    "email": "listentocoolbreeze@gmail.com",
+    "password": "Jhansi1234",
+    "fullName": "Mohana",
+    "mobile": "09500396045",
+    "employeeId": "EMP02",
+    "dateOfJoining": "2026-03-16",
+    "department": "Python",
+    "designation": "Trainer",
+    "qualification": "M.Tech(VLSI Design)",
+    "dateOfBirth": "1987-06-05",
+    "address": "Chennai",
+    "profilePhoto": "",
+    "roles": [
+      "STAFF"
+    ],
+    "createdAt": "2026-03-19T06:40:04.153Z",
+    "updatedAt": "2026-04-05T07:27:10.494Z",
+    "emergencyContact": "",
+    "paidLeaveAllocation": 12,
+    "salaryMode": "Monthly",
+    "status": true
+  }
+]
