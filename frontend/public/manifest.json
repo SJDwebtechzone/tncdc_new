@@ -1,0 +1,29 @@
+{
+  "name": "TamilNadu Career Development Council",
+  "short_name": "TNCDC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0175C2",
+  "description": "TamilNadu Career Development Council - Empowering your career through quality education and certification.",
+  "icons": [
+    {
+      "src": "/assets/tncdc_logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/tncdc_logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/tncdc_logo.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
