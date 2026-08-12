@@ -81,6 +81,39 @@ router.get('/', async (req, res) => {
     }
 });
 
+// GET /api/subjects/export - Export all subjects to Excel
+router.get('/export', async (req, res) => {
+    try {
+        const subjects = await prisma.subject.findMany({
+            include: { questionBanks: true },
+            orderBy: { createdAt: 'desc' }
+        });
+
+        const data = subjects.map((s, idx) => ({
+            'S.No': idx + 1,
+            'Subject Name': s.name,
+            'Total Questions': s.totalQuestions || 0,
+            'Question Banks': s.questionBanks?.length || 0,
+            'Status': s.status ? 'Active' : 'Inactive',
+            'Created At': new Date(s.createdAt).toLocaleDateString('en-GB')
+        }));
+
+        const wb = xlsx.utils.book_new();
+        const ws = xlsx.utils.json_to_sheet(data);
+        xlsx.utils.book_append_sheet(wb, ws, 'Subjects');
+
+        const buffer = xlsx.write(wb, { type: 'buffer', bookType: 'xlsx' });
+        const fileName = `Subjects_${new Date().toISOString().split('T')[0]}.xlsx`;
+
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setHeader('Content-Disposition', `attachment; filename=${fileName}`);
+        res.send(buffer);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+
 // GET /api/subjects/:id - Get a single subject
 router.get('/:id', async (req, res) => {
     try {
@@ -555,6 +588,7 @@ router.delete('/questions/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
 
 // DELETE /api/subjects/:id/questions/batch - Delete multiple questions
 router.post('/:id/questions/batch-delete', async (req, res) => {

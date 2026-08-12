@@ -73,6 +73,34 @@ const Subjects = () => {
         }
     };
 
+    const handleExport = async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}/api/subjects/export`, {
+            responseType: 'blob',
+        });
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'subjects.xlsx');
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.URL.revokeObjectURL(url);
+    } catch (err) {
+        if (err.response?.data instanceof Blob) {
+            const text = await err.response.data.text();
+            try {
+                const json = JSON.parse(text);
+                console.error('Export error:', json.error);
+                toast.error(json.error || 'Failed to export subjects');
+            } catch {
+                toast.error('Failed to export subjects');
+            }
+        } else {
+            toast.error(err.response?.data?.error || 'Failed to export subjects');
+        }
+    }
+};
     const getQBByLangAndType = (lang, type) => {
         return selectedSubject?.questionBanks?.find(qb => 
             qb.language?.toLowerCase() === lang?.toLowerCase() && 
@@ -93,10 +121,10 @@ const Subjects = () => {
                         <Plus className="w-4 h-4 mr-2" />
                         Add Subject
                     </Button>
-                    <Button className="bg-[#1e4e3e] hover:bg-[#15382d] text-white">
-                        <Download className="w-4 h-4 mr-2" />
-                        Export
-                    </Button>
+                    <Button onClick={handleExport} className="bg-[#1e4e3e] hover:bg-[#15382d] text-white">
+    <Download className="w-4 h-4 mr-2" />
+    Export
+</Button>
                 </div>
 
                 {/* Search Filter */}
